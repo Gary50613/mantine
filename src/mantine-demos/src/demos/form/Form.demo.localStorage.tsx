@@ -15,7 +15,7 @@ function Demo() {
     const storedValue = window.localStorage.getItem('user-form');
     if (storedValue) {
       try {
-        form.setValues(JSON.parse(window.localStorage.getItem('user-form')));
+        form.setValues(JSON.parse(storedValue));
       } catch (e) {
         console.log('Failed to parse stored value');
       }
@@ -47,7 +47,7 @@ function Demo() {
     const storedValue = window.localStorage.getItem('user-form');
     if (storedValue) {
       try {
-        form.setValues(JSON.parse(window.localStorage.getItem('user-form')));
+        form.setValues(JSON.parse(storedValue));
       } catch (e) {
         // eslint-disable-next-line no-console
         console.log('Failed to parse stored value');
